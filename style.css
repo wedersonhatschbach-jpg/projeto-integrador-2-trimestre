@@ -1,0 +1,75 @@
+/* Reset básico para zerar margens padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização Principal do Cabeçalho */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #111827; /* Um tom de cinza escuro/moderno */
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.logo-container h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.highlight {
+    color: #3b82f6; /* Azul destaque para a sigla IFA */
+}
+
+/* Menu que segura os botões */
+.nav-menu {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+/* Estilo dos Botões de Encaminhamento */
+.nav-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1f2937; /* Fundo dos botões ligeiramente mais claro que o header */
+    padding: 12px 24px;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease; /* Deixa o efeito de passar o mouse suave */
+}
+
+/* Efeito Hover (Ao passar o mouse por cima) */
+.nav-btn:hover {
+    background-color: #3b82f6; /* Muda para o azul */
+    border-color: #3b82f6;
+    transform: translateY(-2px); /* Dá um leve pulinho para cima */
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Responsividade: Garante que o cabeçalho fique bonito no Celular */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
